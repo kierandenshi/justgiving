@@ -1,0 +1,16 @@
+@mixin font-size($num) {
+  $rem-value: $num / 16;
+  font-size: $num + px;
+  font-size: $rem-value + rem;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

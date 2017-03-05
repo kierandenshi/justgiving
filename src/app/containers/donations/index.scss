@@ -1,0 +1,16 @@
+@import '~app/styles/theme';
+
+.donations {
+
+  .charity-details,
+  .latest-donations {
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 10px;
+  }
+
+  h1 {
+    margin: 10px 0 5px;
+  }
+
+}

@@ -1,0 +1,22 @@
+@import '~app/styles/theme';
+
+.charity-details {
+
+  &__logo {
+    text-align: center;
+    img {
+      width: auto;
+      height: 50px;
+      margin: auto;
+    }
+  }
+
+  &__name {
+    display: none;
+  }
+
+  &__desc {
+
+  }
+
+}

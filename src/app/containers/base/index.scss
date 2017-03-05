@@ -1,0 +1,32 @@
+@import '~app/styles/theme';
+@import '~app/styles/reset';
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  @include font-size(24);
+  font-family: $font-family-base;
+  color: grey;
+}
+
+.base {
+
+  @include font-size(16);
+  font-family: $font-family-base;
+  line-height: 1.2;
+
+  .container {
+
+
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 10px;
+
+
+  }
+
+}
