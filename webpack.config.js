@@ -11,7 +11,7 @@ const isDev = BUILD_ENV !== 'production';
 
 module.exports = {
 
-  devtool: (isDev) ? 'eval' : 'cheap-source-map',
+  // devtool: (isDev) ? 'eval' : 'cheap-source-map',
 
   entry: [
     'babel-polyfill',
@@ -24,7 +24,7 @@ module.exports = {
     path.join(__dirname, 'src/index.js'),
   ]),
   output: {
-    filename: 'bundle.js',
+    filename: isDev ? 'bundle.js' : 'bundle.[hash].js',
     publicPath: '/',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -62,7 +62,12 @@ module.exports = {
     //   'fetch': 'imports?this=>global!exports?global.fetch!isomorphic-fetch',
     //   'flexibility': 'imports?this=>global!exports?global.flexibility!flexibility',
     // }),
-  ],
+
+  ].concat(isDev ? [] : [
+    new webpack.optimize.UglifyJsPlugin({
+      comments: false,
+    })
+  ]),
 
   resolve: {
     alias: {
