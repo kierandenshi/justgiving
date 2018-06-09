@@ -1,5 +1,7 @@
 ### Just Giving programmer test
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kierandenshi/justgiving.svg)](https://greenkeeper.io/)
+
 This solution has been completed as though it were part of a bigger application. This app could have been created with a much simpler stack, but I have emphasised the tooling as implied in the test instruction. I have used ES2015 React, Redux, Redux Saga as the basis for the application. I am bundling with Webpack, which is using Babel and Sass transformers.
 
 #### To install
